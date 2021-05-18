@@ -1,0 +1,105 @@
+.trucks{
+    flex: 0 1 850px;
+    margin: 0 0 0 20px;
+    &__settings{
+        margin: 0 0 16px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-pagination{
+            display: flex;
+        }
+        &-block{
+            @include centering();
+            background-color: $basicColor;
+            cursor: pointer;
+            font-size: 16px;
+            width: 35px;
+            height: 35px;
+            margin: 0 16px 0 0;
+            &:nth-child(3){
+                background-color: $buttonColor;
+            }
+        }
+        &-sort{
+            display: flex;
+            align-items: center;
+            span{
+                font-size: 16px;
+                margin: 0 10px 0 0;
+            }
+            select{
+                height: 35px;
+                width: 207px;
+                outline: none;
+                border: 1px solid #BDBDBD;
+                &:focus{
+                    border: 1px solid $inputColor;
+                }
+            }
+        }
+    }
+    &__items{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.truck{
+    display: flex;
+    background-color: $basicColor;
+    padding: 16px;
+    margin: 0 0 16px 0;
+    text-decoration: none;
+    &__image{
+        img{
+            width: 224px;
+            height: 100%;
+        }
+    }
+    &__information{
+        margin: 0 0 0 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &-title{
+                font-weight: 500;
+                font-size: 18px;
+                color: #000000;
+                white-space: nowrap;
+            }
+            &-price{
+                font-weight: 500;
+                font-size: 16px;
+                color: $defaultText;
+            }
+        }
+        &-text{
+            font-weight: 300;
+            font-size: 14px;
+            color: #828282;
+        }
+        &-footer{
+            &-tags{
+                display: flex;
+            }
+        }
+    }
+}
+
+.tag{
+    background-color: #C4C4C4;
+    font-weight: 300;
+    font-size: 12px;
+    color: $basicColor;
+    padding: 5px 13px;
+    margin: 0 16px 0 0;
+}
+
+.disabled{
+    color: #BDBDBD;
+}

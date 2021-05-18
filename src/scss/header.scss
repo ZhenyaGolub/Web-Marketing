@@ -1,0 +1,10 @@
+.header{
+    background-color: $basicColor;
+    padding: 39px 16px;
+    margin: 40px 0 20px 0;
+    &__title{
+        font-weight: bold;
+        font-size: 18px;
+        color: $basicColor2;
+    }
+}

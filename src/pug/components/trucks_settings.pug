@@ -1,0 +1,11 @@
+.trucks__settings
+        .trucks__settings-pagination
+            .trucks__settings-block <
+            .trucks__settings-block 1
+            .trucks__settings-block 2
+            .trucks__settings-block(class="disabled") >
+        .trucks__settings-sort 
+            span Sort by
+            select(id="select")
+                each criterion in ['price', 'mileage', 'power', 'gross weight', 'payload']
+                    option(value="")=criterion

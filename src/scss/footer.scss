@@ -1,0 +1,63 @@
+.footer{
+    display: flex;
+    align-items: center;
+    background-color: $basicColor;
+    padding: 39px 19px;
+    &__left{
+        display: flex;
+        flex-direction: column;
+        max-width: 270px;
+    }
+    &__title{
+        font-weight: bold;
+        font-size: 18px;
+        color: $basicColor2;
+        margin: 0 0 18px 0;
+    }
+    &__right{
+        font-size: 14px;
+        color: $defaultText;
+        p{
+            width: 565px;
+        }
+    }
+    &__last{
+        text-align: center;
+        color: #828282;
+        font-size: 14px;
+        margin: 13px 0;
+    }
+    &__link{
+        color: $linkColor;
+        text-decoration: none;
+    }
+}
+
+.icons{
+    color: $defaultText;
+    display: flex;
+    i{
+        border: 1px solid $defaultText;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        @include centering();
+        margin: 0 10px 0 0;
+    }
+    a{
+        color: $defaultText;
+        text-decoration: none;
+    }
+}
+
+.location{
+    font-size: 14px;
+    color: $defaultText;
+    margin: 0 0 11px 0;
+}
+
+.phone{
+    font-size: 14px;
+    color:$defaultText;
+    margin: 0 0 16px 0;
+}

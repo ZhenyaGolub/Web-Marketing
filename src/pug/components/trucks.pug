@@ -1,0 +1,26 @@
+section.trucks
+    include trucks_settings.pug
+    .trucks__items
+        each truck in stock
+            a(href=truck.href).truck
+                .truck__image
+                    img(src=`../../images/${truck.image}`, alt="#")
+                .truck__information
+                    .truck__information-header
+                        .truck__information-header-title=truck.title
+                        .truck__information-header-price=truck.price_currency + truck.price 
+                    .truck__information-text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptas repellendus deserunt et rerum iure, tenetur nemo earum sapiente perspiciatis maiores, deleniti ducimus dolorem quod molestiae accusamus? Impedit aperiam itaque debitis explicabo.
+                    .truck__information-footer
+                        .truck__information-footer-tags
+                            - let tags = ['year', 'mileage', 'axle_configuration']
+                                each tag in tags
+                                    if tag==='mileage'
+                                        .tag=truck[tag] + ' km'
+                                    else
+                                        .tag=truck[tag]
+    include trucks_settings.pug
+    include text.pug
+
+
+
+                

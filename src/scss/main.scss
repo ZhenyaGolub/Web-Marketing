@@ -1,0 +1,29 @@
+@import "normalize";
+@import "fonts";
+@import "variables";
+@import "mixins";
+@import "header";
+@import "navigation";
+@import "breadcrumbs";
+@import "title";
+@import "section";
+@import "search";
+@import "trucks";
+@import "text";
+@import "footer";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #D9D9D9;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}

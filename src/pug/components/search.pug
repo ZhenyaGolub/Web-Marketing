@@ -1,0 +1,38 @@
+section.search 
+    .search__results 26 Results Found
+    .search__parameter
+       .search__parameter-title
+            .search-title Year
+            .search-arrow
+                img(src="../../images/arrow.png")
+       .search__parameter-checkboxes
+            each checkbox in [ { year: 2006, id: 1}, { year: 2009, id: 2 }, { year: 2012, id: 3}, { year: 2014, id: 4}, { year: 2016, id: 5}]
+                .search-checkbox 
+                    input(type="checkbox" id=checkbox.id class="checkbox")
+                    label(for=checkbox.id class="label")=checkbox.year
+    .search__parameter
+       .search__parameter-title
+            .search-title Axle configuration
+            .search-arrow
+                img(src="../../images/arrow.png")
+       .search__parameter-checkboxes
+            each checkbox in [ { ac: "6x2", id: 6}, { ac: "4x4", id: 7 }, { ac: "4x2", id: 8}]
+                .search-checkbox 
+                    input(type="radio" name="axleConfiguration" id=checkbox.id class="radio")
+                    label(for=checkbox.id class="radio-label")=checkbox.ac
+    .search__parameter
+       .search__parameter-title
+            .search-title Price
+            .search-arrow
+                img(src="../../images/arrow.png")
+       .search__parameter-price 
+            input(type="number" placeholder="min" min=0)
+            input(type="number" placeholder="max" min=0)
+    .search__parameter
+       .search__parameter-title
+            .search-title Keyword
+            .search-arrow
+                img(src="../../images/arrow.png")
+       .search__parameter-price 
+            input(type="text" placeholder="Keyword" class="keyword" style="width: 100%")
+    button.search-button SEARCH

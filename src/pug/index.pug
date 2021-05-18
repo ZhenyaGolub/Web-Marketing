@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="keywords", content=page_meta.meta_keywords)
+        meta(name="description", content=page_meta.meta_description)
+        title=page_meta.title
+        link(rel="stylesheet", href="../css/style.min.css")
+        script(src="https://kit.fontawesome.com/353d39faee.js" crossorigin="anonymous")
+    body
+        .container
+            include components/header.pug
+            include components/navigation.pug
+            include components/breadcrumbs.pug
+            h1.title=page_meta.h1
+            include components/main.pug
+            include components/footer.pug
+
+        
+
+                
+
+        

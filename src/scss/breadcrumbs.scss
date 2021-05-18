@@ -1,0 +1,29 @@
+.breadcrumbs{
+    margin: 0 0 5px 0;
+    padding: 13px 16px;
+    &__list{
+        list-style: none;
+        display: flex;
+        li{
+            margin: 0 19px 0 0;
+            position: relative;
+            &::after{
+                content: ">";
+                font-size: 10px;
+                color: $basicColor2;
+                padding: 0 0 0 13px;
+            }
+            &:last-child::after{
+                content: "";
+            }
+        }
+        a{
+            color: $linkColor;
+            font-size: 12px;
+            text-decoration: none;
+            &:hover{
+                color: $linkHover;
+            }
+        }
+    }
+}

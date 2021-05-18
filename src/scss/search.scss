@@ -1,0 +1,104 @@
+.search {
+    background-color: $basicColor;
+    padding: 16px;
+    flex: 0 1 270px;
+    max-height: 596px;
+    &-title {
+        font-size: 16px;
+        color: $basicColor2;
+    }
+
+    &-checkbox {
+        color: $defaultText;
+        font-size: 16px;
+    }
+
+    &__results {
+        color: #333333;
+        font-weight: 500;
+        font-size: 16px;
+        padding: 0 0 16px 0;
+        margin: 0 0 14px 0;
+        border-bottom: 1px solid #BDBDBD;
+    }
+
+    &__parameter {
+        margin: 0 0 15px 0;
+        &-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 0 11px 0;
+        }
+        &-price{
+            display: flex;
+            justify-content: space-between;
+            input{
+                padding: 7px 8px;
+                font-size: 20px;
+                border: 1px solid #BDBDBD;
+                width: 112px;
+                outline: none;
+                &:focus{
+                    border: 1px solid $inputColor;
+                }
+            }
+        }
+    }
+}
+
+.checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.checkbox+.label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.checkbox+.label::before {
+   @include input();
+}
+
+.checkbox:checked+.label::before {
+    background-color: $inputColor;
+    background-image: url('../images/checkbox.png');
+}
+
+.radio{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.radio+.radio-label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.radio+.radio-label::before {
+    @include input();
+    border-radius: 50%;
+}
+
+.radio:checked+.radio-label::before {
+    background-color: transparent;
+    background-image: url('../images/Ellipse.png');
+}
+
+.search-button{
+    background-color: $buttonColor;
+    border: none;
+    color: $basicColor;
+    font-size: 16px;
+    width: 100%;
+    padding: 8px 0;
+    cursor: pointer;
+    &:hover{
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
